@@ -1,7 +1,8 @@
 function Create(){
     return (
+        // console.log("In creteat file")
         <div>
-            <h1>Hello from create</h1>
+            <h1>In create</h1>
         </div>
     );
 }

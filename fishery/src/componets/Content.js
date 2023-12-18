@@ -1,8 +1,10 @@
 function Content() {
     return (
+        // console.log("In content file")
         <div>
-            <h1>Hello World!</h1>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
+            <h1>In content</h1>
+            <h2>Time: {new Date().toLocaleTimeString()}.</h2>
+            <h2>Date: {new Date().toLocaleDateString()}</h2>
         </div>
     );
 }
