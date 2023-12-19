@@ -1,8 +1,10 @@
+import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import './create.css';
 
 function Create() {
-    //Entres for data
+    // Entries for data
     const [name, setName] = useState('');
     const [location, setLocation] = useState('');
     const [lake, setLake] = useState('');
@@ -26,43 +28,59 @@ function Create() {
             .then()
             .catch();
     };
-    //info and data entry for database
+
+    // Info and data entry for the database
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <div className="form">
+        <div className="container">
+            <h1>Fish Data Entry</h1>
+            <form onSubmit={handleSubmit} className="form">
+                <div>
                     <label>Add fishName</label>
-                    <input type="text" className="from-Entry"
+                    <input
+                        type="text"
+                        className="from-Entry"
                         value={name}
-                        onChange={(e) => { setName(e.target.value) }} />
-                </div>
-                <div className="form">
-                    <label>Add fishing location</label>
-                    <input type="text" className="from-Entry"
-                        value={location}
-                        onChange={(e) => { setLocation(e.target.value) }} />
-                </div>
-                <div className="form">
-                    <label>Add Lake/River name</label>
-                    <input type="text" className="from-Entry"
-                        value={lake}
-                        onChange={(e) => { setLake(e.target.value) }} />
-                </div>
-                <div className="form">
-                    <label>Add weight of fish lbs</label>
-                    <input type="text" className="from-Entry"
-                        value={weight}
-                        onChange={(e) => { setWeight(e.target.value) }} />
-                </div>
-                <div className="form">
-                    <label>Add fish size inches</label>
-                    <input type="text" className="from-Entry"
-                        value={size}
-                        onChange={(e) => { setSize(e.target.value) }} />
+                        onChange={(e) => { setName(e.target.value) }}
+                    />
                 </div>
                 <div>
-                    <input type="submit"
-                    value="Add fishInfo"></input>
+                    <label>Add fishing location</label>
+                    <input
+                        type="text"
+                        className="from-Entry"
+                        value={location}
+                        onChange={(e) => { setLocation(e.target.value) }}
+                    />
+                </div>
+                <div>
+                    <label>Add Lake/River name</label>
+                    <input
+                        type="text"
+                        className="from-Entry"
+                        value={lake}
+                        onChange={(e) => { setLake(e.target.value) }}
+                    />
+                </div>
+                <div>
+                    <label>Add weight of fish lbs</label>
+                    <input
+                        type="text"
+                        className="from-Entry"
+                        value={weight}
+                        onChange={(e) => { setWeight(e.target.value) }}
+                    />
+                </div>
+                <div>
+                    <label>Add fish size inches</label>
+                    <input
+                        type="text"
+                        className="from-Entry"
+                        value={size}
+                        onChange={(e) => { setSize(e.target.value) }}
+                    />
+                </div>
+                <div>
+                    <input type="submit" value="Add fishInfo" />
                 </div>
             </form>
         </div>

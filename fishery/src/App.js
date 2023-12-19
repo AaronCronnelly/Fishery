@@ -14,7 +14,7 @@ function App() {
         <header className="App-header">
           <Navbar bg="dark" data-bs-theme="dark">
             <Container>
-              <Navbar.Brand href="/">Navbar</Navbar.Brand>
+              <Navbar.Brand href="/">Fishery</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/Create">Create</Nav.Link>
