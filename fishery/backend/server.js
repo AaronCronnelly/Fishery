@@ -50,6 +50,13 @@ const fishSchema = new mongoose.Schema({
 
 const fishModel = mongoose.model('fishmodel', fishSchema);
 
+app.delete('/api/fish/:id',async (req, res)=>{
+    console.log("Delete: "+req.params.id);
+  
+    let fish = await fishModel.findByIdAndDelete(req.params.id);
+    res.send(fish);
+  })
+
 app.put('/api/fish/:id', async (req, res) => {
     console.log("Update: " + req.params.id);
 
