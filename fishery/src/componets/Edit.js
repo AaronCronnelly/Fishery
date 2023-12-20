@@ -1,9 +1,22 @@
-function Edit() {
-    return (
-        <div>
-            <h1>Hello form edit</h1>
-        </div>
-    );
-}
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-export default Edit;
+export default function edit(){
+    let{id}=useParams();
+
+    const [name, setName] = useState('');
+    const [location, setLocation] = useState('');
+    const [lake, setLake] = useState('');
+    const [weight, setWeight] = useState('');
+    const [size, setSize] = useState('');
+
+    const navigate=useNavigate();
+
+    useEffect(
+        ()=>{
+            axios.get('http://localhost:4000/api/fishInfo')
+            .then
+        }
+    )
+};
