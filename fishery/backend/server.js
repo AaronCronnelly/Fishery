@@ -40,7 +40,7 @@ const fishSchema = new mongoose.Schema({
 })
 
 const fishModel = mongoose.model('fishmodel', fishSchema);
-
+//This is for create 
 app.post('/api/fishInfo', (req, res) => {
     console.log(req.body);
 
@@ -59,3 +59,8 @@ app.get('/', (req, res) => {
     res.send('hello world')
 })
 
+//This is for read
+app.get('/api/fishInfo', async(req,res)=>{
+    let fishes=await fishModel.find({});
+    res.json(fishes);
+})
