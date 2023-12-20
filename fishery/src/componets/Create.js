@@ -71,7 +71,7 @@ function Create() {
                     />
                 </div>
                 <div>
-                    <label>Add fish size inches</label>
+                    <label>Add fish size In</label>
                     <input
                         type="text"
                         className="from-Entry"
