@@ -1,4 +1,5 @@
 import './App.css';
+import 'process/browser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -8,7 +9,7 @@ import Edit from './componets/Edit';
 import Read from './componets/Read';
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
