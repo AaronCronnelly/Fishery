@@ -18,6 +18,7 @@ function Content() {
             <br></br>
             In conclusion, <strong>Fishery</strong> is not just an app; it's a lifestyle for those who live for the thrill of the catch. Whether you're a seasoned angler or just starting your fishing journey, make every cast count with <strong>Fishery</strong> – where every fish tale is worth telling. Download the app today and reel in the memories!
             </p>
+            <h2><strong>!!!!Please remember that this is a indevelopment app, and it will grow over the coming years!!!!</strong></h2>
         </div>
     );
 }

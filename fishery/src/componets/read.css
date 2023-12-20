@@ -1,25 +1,29 @@
 /* read.css */
 body {
-    background-color: #08083C;
-    color: lightblue;
+    background-image: url('../img/LoughCorribe.jpg');
+    background-size: cover; /* Adjust as needed */
+    color: rgb(6, 93, 6);
     font-family: 'Kalnia', serif;
+    font-size: larger;
     margin: 0;
     padding: 0;
 }
 
 .read-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Each column has a minimum width of 200px and grows as needed */
+    gap: 20px; /* Adjust the gap between cards as needed */
     padding: 20px;
+    justify-content: center; /* Center the columns horizontally */
 }
 
 .fish-card {
     /* Additional styles for each individual fish card */
-    border: 1px solid lightblue;
-    margin: 10px;
+    border: 1px solid #3D59DD;
     padding: 15px;
     text-align: center;
+    width: 100%; /* Each card takes 100% of the column width */
+    min-width: 400px; /* Set a minimum width for each card */
+    height: auto; /* Let the height adjust based on content */
+    box-sizing: border-box;
 }
-
-/* Additional styles for your Fishes component or other elements within read.js */

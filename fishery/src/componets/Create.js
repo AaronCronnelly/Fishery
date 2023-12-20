@@ -35,7 +35,7 @@ function Create() {
             <h1>Fish Data Entry</h1>
             <form onSubmit={handleSubmit} className="form">
                 <div>
-                    <label>Add fishName</label>
+                    <label><strong>Add fishName</strong></label>
                     <input
                         type="text"
                         className="from-Entry"
@@ -44,7 +44,7 @@ function Create() {
                     />
                 </div>
                 <div>
-                    <label>Add fishing location</label>
+                    <label><strong>Add fishing location</strong></label>
                     <input
                         type="text"
                         className="from-Entry"
@@ -53,7 +53,7 @@ function Create() {
                     />
                 </div>
                 <div>
-                    <label>Add Lake/River name</label>
+                    <label><strong>Add Lake/River name</strong></label>
                     <input
                         type="text"
                         className="from-Entry"
@@ -62,7 +62,7 @@ function Create() {
                     />
                 </div>
                 <div>
-                    <label>Add weight of fish lbs</label>
+                    <label><strong>Add weight of fish lbs</strong></label>
                     <input
                         type="text"
                         className="from-Entry"
@@ -71,7 +71,7 @@ function Create() {
                     />
                 </div>
                 <div>
-                    <label>Add fish size In</label>
+                    <label><strong>Add fish size In</strong></label>
                     <input
                         type="text"
                         className="from-Entry"

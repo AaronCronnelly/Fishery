@@ -27,6 +27,8 @@ h1 {
     padding: 8px;
     box-sizing: border-box;
     margin-bottom: 10px; /* Added margin between form entries */
+    background-color: gray;
+    color: black;
 }
 
 .input-group {
@@ -36,7 +38,7 @@ h1 {
 input[type="submit"] {
     padding: 10px;
     background-color: #4CAF50;
-    color: white;
+    color: #08083C;
     border: none;
     cursor: pointer;
 }
