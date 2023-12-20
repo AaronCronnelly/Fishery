@@ -24,7 +24,7 @@ function Create() {
             weight: weight,
             size: size
         };
-        axios.post('http://localhost:4000/api/fishInfo', fishInfo)
+        axios.post('http://localhost:4000/api/fish', fishInfo)
             .then()
             .catch();
     };

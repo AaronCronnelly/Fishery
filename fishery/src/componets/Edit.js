@@ -15,7 +15,7 @@ export default function Edit() {
 
     useEffect(
         () => {
-            axios.get('http://localhost:4000/api/fishInfo' + id)
+            axios.get('http://localhost:4000/api/fish' + id)
                 .then((response) => {
                     setName(response.data.name);
                     setLocation(response.data.location);
@@ -34,7 +34,7 @@ export default function Edit() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const fishInfo = {
+        const fish = {
             name: name,
             location: location,
             lake: lake,
@@ -42,7 +42,7 @@ export default function Edit() {
             size: size
         }
 
-        axios.put('http://localhost:4000/api/fishInfo' + id, fishInfo)
+        axios.put('http://localhost:4000/api/fsih' + id, fish)
             .then((res) => {
                 navigate('/read');
             })

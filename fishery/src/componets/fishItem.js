@@ -23,7 +23,7 @@ function FishItem(props) {
 }
 
 const handleDelete = (fishId, reloadFunction) => {
-    axios.delete(`http://localhost:4000/api/fishInfo/${fishId}`)
+    axios.delete(`http://localhost:4000/api/fish/${fishId}`)
         .then(() => {
             reloadFunction();
         })

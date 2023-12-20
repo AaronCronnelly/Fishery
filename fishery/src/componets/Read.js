@@ -8,7 +8,7 @@ function Read() {
     const [data, setdata] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:4000/api/fishInfo')
+        axios.get('http://localhost:4000/api/fish')
             .then(response => {
                 setdata(response.data);
             })
@@ -18,7 +18,7 @@ function Read() {
     }, []);
 
     const reload = () => {
-        axios.get('http://localhost:4000/api/fishInfo')
+        axios.get('http://localhost:4000/api/fish')
             .then(response => {
                 setdata(response.data);
             })

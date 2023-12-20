@@ -50,7 +50,7 @@ const fishSchema = new mongoose.Schema({
 
 const fishModel = mongoose.model('fishmodel', fishSchema);
 //This is for create 
-app.post('/api/fishInfo', (req, res) => {
+app.post('/api/fish', (req, res) => {
     console.log(req.body);
 
     fishModel.create({
@@ -69,12 +69,12 @@ app.get('/', (req, res) => {
 })
 
 //This is for read
-app.get('/api/fishInfo', async(req,res)=>{
+app.get('/api/fish', async(req,res)=>{
     let fishes=await fishModel.find({});
     res.json(fishes);
 })
 
-app.get('/api/fishInfo/:identifier', async(req,res)=>{
+app.get('/api/fish/:identifier', async(req,res)=>{
     console.log(req.params.identifier);
     let fish=await fishModel.findById(req.params.identifier);
     res.send(fish);
