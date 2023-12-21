@@ -1,17 +1,23 @@
+// Importing CSS files and external libraries
 import './App.css';
 import 'process/browser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Importing React components for different pages
 import Content from './componets/Content';
 import Create from './componets/Create';
 import Edit from './componets/Edit';
 import Read from './componets/Read';
 
+// Define the main App component
 function App() {
+  // Render the main structure of the application
   return ( 
     <BrowserRouter>
       <div className="App">
+        {/* Header section with navigation bar */}
         <header className="App-header">
           <Navbar bg="dark" data-bs-theme="dark">
             <Container>
@@ -25,6 +31,7 @@ function App() {
           </Navbar>
         </header>
 
+        {/* Define the routes for different pages */}
         <Routes>
           <Route path='/' element={<Content></Content>}></Route>
           <Route path='/Read' element={<Read></Read>}></Route>
@@ -36,4 +43,5 @@ function App() {
   );
 }
 
+// Export the App component as the default export
 export default App;

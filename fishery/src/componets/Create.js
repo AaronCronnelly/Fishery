@@ -1,22 +1,27 @@
+// Importing React, useState hook, Axios for HTTP requests, and CSS file
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import './create.css';
 
+// Define the Create component for data entry
 function Create() {
-    // Entries for data
+    // State variables for capturing form input data
     const [name, setName] = useState('');
     const [location, setLocation] = useState('');
     const [lake, setLake] = useState('');
     const [weight, setWeight] = useState('');
     const [size, setSize] = useState('');
 
+    // Function to handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("Name: " + name + "Location: " + location + "Lake: " + lake
-            + "Weight: " + weight + "Size: " + size);
+        // Log the entered data to the console for verification
+        console.log("Name: " + name + " Location: " + location + " Lake: " + lake
+            + " Weight: " + weight + " Size: " + size);
 
+        // Create an object with the entered data
         const fishInfo = {
             name: name,
             location: location,
@@ -24,16 +29,24 @@ function Create() {
             weight: weight,
             size: size
         };
+
+        // Make a POST request to the server to add fish information
         axios.post('http://localhost:4000/api/fish', fishInfo)
-            .then()
-            .catch();
+            .then(response => {
+                // Handle the response if needed
+            })
+            .catch(error => {
+                // Handle any errors that occur during the request
+                console.log(error);
+            });
     };
 
-    // Info and data entry for the database
+    // Render the form for data entry
     return (
         <div className="container">
             <h1>Fish Data Entry</h1>
             <form onSubmit={handleSubmit} className="form">
+                {/* Form inputs for fish data */}
                 <div>
                     <label><strong>Add fishName</strong></label>
                     <input
@@ -79,6 +92,7 @@ function Create() {
                         onChange={(e) => { setSize(e.target.value) }}
                     />
                 </div>
+                {/* Submit button for form submission */}
                 <div>
                     <input type="submit" value="Add fishInfo" />
                 </div>
@@ -87,4 +101,5 @@ function Create() {
     );
 }
 
+// Export the Create component as the default export
 export default Create;
